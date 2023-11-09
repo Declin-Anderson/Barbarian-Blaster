@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1ah2nq55gt07"]
+[gd_scene load_steps=9 format=3 uid="uid://d1ah2nq55gt07"]
 
 [ext_resource type="MeshLibrary" uid="uid://lmj7mnxr1cr7" path="res://MeshLibraries/SpaceLibrary.tres" id="1_husv4"]
 [ext_resource type="PackedScene" uid="uid://bek4hhiux4fpr" path="res://Enemy/enemy.tscn" id="2_en7hd"]
+[ext_resource type="PackedScene" uid="uid://c5ao1oydtg25s" path="res://Base/base.tscn" id="3_d78lr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gcvu3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -95,4 +96,22 @@ path_u_distance = 1.0
 path_joined = false
 
 [node name="Enemy" parent="Path3D" instance=ExtResource("2_en7hd")]
+transform = Transform3D(-0.0116633, 0, -0.999932, 0, 1, 0, 0.999932, 0, -0.0116633, -2.87515, 0, 6.53314)
+progress = 20.0
+
+[node name="Enemy2" parent="Path3D" instance=ExtResource("2_en7hd")]
+transform = Transform3D(-0.0165679, 0, -0.999863, 0, 1, 0, 0.999863, 0, -0.0165679, -7.87465, 0, 6.46187)
+progress = 15.0
+
+[node name="Enemy3" parent="Path3D" instance=ExtResource("2_en7hd")]
+transform = Transform3D(-0.0202706, 0, -0.999795, 0, 1, 0, 0.999795, 0, -0.0202706, -12.8739, 0, 6.36943)
+progress = 10.0
+
+[node name="Enemy4" parent="Path3D" instance=ExtResource("2_en7hd")]
+transform = Transform3D(-0.0234327, 0, -0.999725, 0, 1, 0, 0.999725, 0, -0.0234327, -17.8727, 0, 6.26007)
+progress = 5.0
+
+[node name="Enemy5" parent="Path3D" instance=ExtResource("2_en7hd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.871, 0, 6.13437)
+
+[node name="Base" parent="." instance=ExtResource("3_d78lr")]
