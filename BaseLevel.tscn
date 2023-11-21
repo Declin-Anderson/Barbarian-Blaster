@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1ah2nq55gt07"]
+[gd_scene load_steps=10 format=3 uid="uid://d1ah2nq55gt07"]
 
+[ext_resource type="PackedScene" uid="uid://cjfrpacbxtf7f" path="res://RayPickerCamera/ray_picker_camera.tscn" id="1_77rip"]
 [ext_resource type="MeshLibrary" uid="uid://lmj7mnxr1cr7" path="res://MeshLibraries/SpaceLibrary.tres" id="1_husv4"]
 [ext_resource type="PackedScene" uid="uid://bek4hhiux4fpr" path="res://Enemy/enemy.tscn" id="2_en7hd"]
 [ext_resource type="PackedScene" uid="uid://c5ao1oydtg25s" path="res://Base/base.tscn" id="3_d78lr"]
@@ -41,8 +42,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 size = Vector3(100, 2, 100)
 material = SubResource("StandardMaterial3D_we27x")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 14.5, 9.5)
+[node name="RayPickerCamera" parent="." node_paths=PackedStringArray("gridmap") instance=ExtResource("1_77rip")]
+gridmap = NodePath("../GridMap")
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_husv4")
@@ -108,7 +109,7 @@ transform = Transform3D(-0.0202706, 0, -0.999795, 0, 1, 0, 0.999795, 0, -0.02027
 progress = 10.0
 
 [node name="Enemy4" parent="Path3D" instance=ExtResource("2_en7hd")]
-transform = Transform3D(-0.0234327, 0, -0.999725, 0, 1, 0, 0.999725, 0, -0.0234327, -17.8727, 0, 6.26007)
+transform = Transform3D(-0.0234326, 0, -0.999725, 0, 1, 0, 0.999725, 0, -0.0234326, -17.8727, 0, 6.26007)
 progress = 5.0
 
 [node name="Enemy5" parent="Path3D" instance=ExtResource("2_en7hd")]
