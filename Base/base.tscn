@@ -1,24 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5ao1oydtg25s"]
+[gd_scene load_steps=4 format=3 uid="uid://c5ao1oydtg25s"]
 
 [ext_resource type="Script" path="res://Base/base.gd" id="1_a1mus"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vg1y5"]
-albedo_color = Color(1, 0, 0, 1)
+[ext_resource type="FontFile" uid="uid://bu3nb5psyfsix" path="res://Asap/static/Asap-Bold.ttf" id="2_c33r0"]
+[ext_resource type="PackedScene" uid="uid://k3qnbcnerfbr" path="res://Assets/Base.glb" id="2_cfjmo"]
 
 [node name="Base" type="Node3D" groups=["base"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
 script = ExtResource("1_a1mus")
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-radius = 2.0
-height = 4.0
-sides = 32
-material = SubResource("StandardMaterial3D_vg1y5")
-
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
 billboard = 1
 text = "5"
+font = ExtResource("2_c33r0")
 font_size = 500
 outline_size = 100
+
+[node name="Base" parent="." instance=ExtResource("2_cfjmo")]

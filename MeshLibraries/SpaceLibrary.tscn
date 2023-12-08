@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cprq20uvxnv2y"]
+[gd_scene load_steps=9 format=3 uid="uid://cprq20uvxnv2y"]
+
+[ext_resource type="PackedScene" uid="uid://bye5ftkwm0l1u" path="res://Assets/Tree.glb" id="1_l605w"]
+[ext_resource type="PackedScene" uid="uid://bye5ftkwm0l1u" path="res://Assets/Rocks.glb" id="2_bnh27"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oao4t"]
-albedo_color = Color(0.431373, 0.431373, 0.431373, 1)
+blend_mode = 1
+albedo_color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3e5vv"]
 material = SubResource("StandardMaterial3D_oao4t")
@@ -11,7 +15,8 @@ size = Vector3(4, 0.1, 4)
 data = PackedVector3Array(-2, 0.05, 2, 2, 0.05, 2, -2, -0.05, 2, 2, 0.05, 2, 2, -0.05, 2, -2, -0.05, 2, 2, 0.05, -2, -2, 0.05, -2, 2, -0.05, -2, -2, 0.05, -2, -2, -0.05, -2, 2, -0.05, -2, 2, 0.05, 2, 2, 0.05, -2, 2, -0.05, 2, 2, 0.05, -2, 2, -0.05, -2, 2, -0.05, 2, -2, 0.05, -2, -2, 0.05, 2, -2, -0.05, -2, -2, 0.05, 2, -2, -0.05, 2, -2, -0.05, -2, 2, 0.05, 2, -2, 0.05, 2, 2, 0.05, -2, -2, 0.05, 2, -2, 0.05, -2, 2, 0.05, -2, -2, -0.05, 2, 2, -0.05, 2, -2, -0.05, -2, 2, -0.05, 2, 2, -0.05, -2, -2, -0.05, -2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4majf"]
-albedo_color = Color(0.909804, 0.282353, 0.282353, 1)
+transparency = 1
+albedo_color = Color(0.909804, 0.282353, 0.282353, 0.0627451)
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wh02"]
 material = SubResource("StandardMaterial3D_4majf")
@@ -31,10 +36,14 @@ mesh = SubResource("BoxMesh_3e5vv")
 shape = SubResource("ConcavePolygonShape3D_biatv")
 
 [node name="TurretBase" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15277, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00597715, 0)
 mesh = SubResource("BoxMesh_0wh02")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TurretBase"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TurretBase/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_mugbj")
+
+[node name="Tree" parent="." instance=ExtResource("1_l605w")]
+
+[node name="Rocks" parent="." instance=ExtResource("2_bnh27")]
