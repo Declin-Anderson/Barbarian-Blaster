@@ -3,7 +3,7 @@ extends Path3D
 # Gets the enemy that will be spawned on the path
 @export var enemy_scene: PackedScene
 # Gets the difficulty manager to determine the starting values of the enemies
-@export var difficulty_manager: Node3D
+@export var difficulty_manager: Node
 # Gets the canvas to play the victory screen on when the player wins
 @export var victory_layer: CanvasLayer
 # Reference to the timer that is used to spawn the enemies

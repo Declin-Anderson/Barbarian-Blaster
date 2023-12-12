@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dqlhyc1b11ms2"]
 
 [ext_resource type="Script" path="res://UserInterface/victory_layer.gd" id="1_1xdp7"]
-[ext_resource type="Texture2D" uid="uid://dtf08jel455kg" path="res://Assets/star.png" id="2_2g63w"]
 [ext_resource type="FontFile" uid="uid://bu3nb5psyfsix" path="res://Asap/static/Asap-Bold.ttf" id="2_ud5oc"]
+[ext_resource type="Texture2D" uid="uid://dtf08jel455kg" path="res://Assets/star.png" id="3_ci5ys"]
 
 [sub_resource type="Theme" id="Theme_dxw22"]
 default_font = ExtResource("2_ud5oc")
@@ -50,7 +50,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_2g63w")
+texture = ExtResource("3_ci5ys")
 expand_mode = 2
 stretch_mode = 5
 
@@ -60,7 +60,7 @@ modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_2g63w")
+texture = ExtResource("3_ci5ys")
 expand_mode = 2
 stretch_mode = 5
 
@@ -70,7 +70,7 @@ modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_2g63w")
+texture = ExtResource("3_ci5ys")
 expand_mode = 2
 stretch_mode = 5
 
